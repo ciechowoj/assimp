@@ -232,6 +232,9 @@ struct aiLight
     /** Size of area light source. */
     C_STRUCT aiVector2D mSize;
 
+    bool mDiffuse;
+    bool mSpecular;
+
 #ifdef __cplusplus
 
     aiLight()
@@ -242,6 +245,8 @@ struct aiLight
         ,   mAngleInnerCone       ((float)AI_MATH_TWO_PI)
         ,   mAngleOuterCone       ((float)AI_MATH_TWO_PI)
         ,   mSize                 (0.f, 0.f)
+        ,   mDiffuse              (false)
+        ,   mSpecular             (false)
     {
     }
 

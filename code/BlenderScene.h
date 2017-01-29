@@ -437,7 +437,7 @@ struct Lamp : ElemBase {
       Type type FAIL;
       short flags;
 
-      //int mode;
+      int mode;
 
       short colormodel, totex;
       float r,g,b,k WARN;

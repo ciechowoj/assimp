@@ -1182,6 +1182,8 @@ aiLight* BlenderImporter::ConvertLight(const Scene& /*in*/, const Object* obj, c
             // blender orients directional lights as facing toward -z
             out->mDirection = aiVector3D(0.f, 0.f, -1.f);
             out->mUp = aiVector3D(0.f, 1.f, 0.f);
+            out->mDiffuse = (lamp->mode & 2048u) == 0;
+            out->mSpecular = (lamp->mode & 4096u) == 0;
             break;
 
         default:

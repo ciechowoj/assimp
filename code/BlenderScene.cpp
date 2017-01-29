@@ -191,6 +191,7 @@ template <> void Structure :: Convert<Lamp> (
 
     ReadField<ErrorPolicy_Fail>(dest.id,"id",db);
     ReadField<ErrorPolicy_Fail>((int&)dest.type,"type",db);
+    ReadField<ErrorPolicy_Igno>(dest.mode,"mode",db);
     ReadField<ErrorPolicy_Igno>(dest.flags,"flags",db);
     ReadField<ErrorPolicy_Igno>(dest.colormodel,"colormodel",db);
     ReadField<ErrorPolicy_Igno>(dest.totex,"totex",db);
